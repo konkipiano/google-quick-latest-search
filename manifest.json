@@ -1,0 +1,33 @@
+{
+    "name": "Google Quick Latest Search",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Press 'q' in search page and you can specify the period",
+    "icons": {
+        "16": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.co.jp/search*"
+            ],
+            "js": [
+                "/js/lib/jquery.min.js",
+                "/js/period_specified.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/icon.png",
+            "24": "icons/icon.png",
+            "32": "icons/icon.png"
+        },
+        "default_title": "Google Quick Period"
+    },
+    "background": {
+        "scripts": []
+    }
+}
